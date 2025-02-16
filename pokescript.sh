@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
 fi
 
 POKEMON=$1
-RESPONSE=$(curl "https://pokeapi.co/api/v2/pokemon/$POKEMON")
+RESPONSE=$(curl -s "https://pokeapi.co/api/v2/pokemon/$POKEMON")
 
 if [ -z "$RESPONSE" ]; then
     echo "Error: La respuesta está vacía"
